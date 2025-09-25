@@ -1,10 +1,15 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Route } from "@angular/router";
+import { AddTodoComponent } from "./add-todo/add-todo.component";
+import { HomeComponent } from "./home/home.component";
 
-const routes: Routes = [];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+export const ROUTES : Route[] = [
+  {
+    path: '',
+    component: HomeComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'add-todo',
+    component: AddTodoComponent
+  }
+];
