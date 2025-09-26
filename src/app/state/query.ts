@@ -2,7 +2,9 @@ import { Query } from "@datorama/akita";
 import { TodoState, TodoStore } from "./store";
 import { Observable } from "rxjs";
 import { Todo } from "../todo.model";
+import { Injectable } from "@angular/core";
 
+@Injectable({ providedIn: 'root' })
 export class TodoQuery extends Query<TodoState> {
     constructor(protected todoStore: TodoStore) {
         super(todoStore);
@@ -16,7 +18,7 @@ export class TodoQuery extends Query<TodoState> {
         return this.select(state => state.isLoaded);
     }
 
-    getLoading():  Observable<boolean> {
+    getIsLoading():  Observable<boolean> {
         return this.selectLoading();
     }
 }
