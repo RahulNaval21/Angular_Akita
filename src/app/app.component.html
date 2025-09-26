@@ -1,13 +1,18 @@
 <mat-toolbar color="primary">
-  <ul>
-  <li><button (click)="getAllTodos()">GET All Todods</button></li>
-  <li><button (click)="getOneTodo()">GET One Todo</button></li>
-  <!-- <li><a (click)="postData()">POST</a></li>
-  <li><a (click)="updateData()">PUT</a></li>
-  <li><a href="#">PATCH</a></li>
-  <li><a (click)="deleteData()">DELETE</a></li> -->
-</ul>
+  <span>My Todo App</span>
 </mat-toolbar>
 
-<pre>{{data | json}}</pre>
+<!-- <mat-toolbar color="primary">
+  <ul>
+    <li><button (click)="getAllTodos()">GET All Todods</button></li>
+    <li><button (click)="getOneTodo()">GET One Todo</button></li>
+    <li><a (click)="postData()">POST</a></li>
+    <li><a (click)="updateData()">PUT</a></li>
+    <li><a href="#">PATCH</a></li>
+    <li><a (click)="deleteData()">DELETE</a></li>
+  </ul>
+</mat-toolbar>
+
+<pre>{{ data | json }}</pre> -->
+
 <router-outlet></router-outlet>
